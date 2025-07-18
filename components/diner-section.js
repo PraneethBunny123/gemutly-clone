@@ -50,12 +50,12 @@ export default function DinerSection() {
 
       {/* Dots */}
       <div className="flex justify-center mt-6 space-x-3">
-        {cards.map((card, index) => (
+        {cards.map(card => (
           <button
-            key={index}
+            key={card.id}
             onClick={() => setActiveCard(card.id)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              activeCard === card.id ? "bg-orange-500 w-4 h-4" : "bg-gray-300"
+              activeCard === card.id ? "bg-orange-500" : "bg-gray-300"
             }`}
           ></button>
         ))}
