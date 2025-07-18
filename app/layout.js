@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="bg-[url('/mainbg.jpg')] opacity-50 fixed -z-10 inset-0" fill />
+        <div className="bg-[url('/mainbg.jpg')] opacity-50 fixed -z-10 inset-0" />
         {/*header*/}
         <Header />
         <main className="min-h-screen">{children}</main>
