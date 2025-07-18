@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { Bell, Heart, ShoppingCart, SunMoon, Globe } from "lucide-react";
+import { SignedOut, SignedIn, SignInButton, UserButton } from "@clerk/nextjs";
 
 export default function Header() {
   return (
@@ -41,8 +42,15 @@ export default function Header() {
               <Bell className="size-4" />
             </Button>
           </Link>
-
-          <Button>Login</Button>
+            <SignedOut>
+                <SignInButton mode="modal">
+                    <Button>Login</Button>
+                </SignInButton>
+            </SignedOut>
+            <SignedIn>
+                <UserButton />
+            </SignedIn>
+          
         </div>
       </div>
     </nav>
