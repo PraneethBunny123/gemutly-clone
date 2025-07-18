@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Utensils, CreditCard, Users } from "lucide-react"; // Example icons from lucide-react
+import { Utensils, ShieldCheck, Users } from "lucide-react"; // or any icon set you prefer
 
 export default function DinerSection() {
   const [activeCard, setActiveCard] = useState(null);
@@ -9,21 +9,21 @@ export default function DinerSection() {
   const cards = [
     {
       id: 1,
+      icon: <Utensils className="w-10 h-10 text-orange-500 mb-4" />,
       title: "Browse Local Menus",
       description: "Explore menus from local chefs near you - filtered by cuisine, price, and reviews.",
-      icon: <Utensils className="w-8 h-8 text-orange-500 mb-4" />,
     },
     {
       id: 2,
+      icon: <ShieldCheck className="w-10 h-10 text-orange-500 mb-4" />,
       title: "Fast, Secure Checkout",
       description: "Pay in seconds via Stripe Elements and track your order in real time.",
-      icon: <CreditCard className="w-8 h-8 text-orange-500 mb-4" />,
     },
     {
       id: 3,
+      icon: <Users className="w-10 h-10 text-orange-500 mb-4" />,
       title: "Share & Save",
-      description: "Invite friends and family to split costs and earn group discounts",
-      icon: <Users className="w-8 h-8 text-orange-500 mb-4" />,
+      description: "Invite friends and family to split costs and earn group discounts.",
     },
   ];
 
@@ -35,15 +35,15 @@ export default function DinerSection() {
           <div
             key={card.id}
             onClick={() => setActiveCard(card.id)}
-            className={`p-6 min-h-[360px] rounded-lg border cursor-pointer transition flex flex-col items-center justify-center text-center ${
+            className={`p-6 min-h-[300px] rounded-lg border cursor-pointer transition text-center ${
               activeCard === card.id
                 ? "border-orange-500 shadow-lg"
                 : "border-gray-200"
-            } hover:shadow-md bg-white`}
+            } hover:shadow-md bg-white flex flex-col items-center text-start`}
           >
             {card.icon}
-            <h3 className="text-xl font-bold mb-2">{card.title}</h3>
-            <p className="text-sm text-gray-600">{card.description}</p>
+            <h3 className="text-xl font-bold mb-2 mt-2">{card.title}</h3>
+            <p className="text-base text-gray-700 mt-1">{card.description}</p>
           </div>
         ))}
       </div>
