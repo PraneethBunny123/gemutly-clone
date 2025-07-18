@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import { ClerkProvider } from "@clerk/nextjs";
+import Footer from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,13 +26,12 @@ export default function RootLayout({ children }) {
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
           {/*header*/}
           <Header />
+
           <main className="min-h-screen">{children}</main>
 
-          <footer className="bg-orange-300 py-12 bg-opacity-10">
-            <div>
-              <p className="mx-auto px-4 text-center text-gray-900">Made by praneeth</p>
-            </div>
-          </footer>
+          {/*footer*/}
+          <Footer />
+
         </body>
       </html>
     </ClerkProvider>
