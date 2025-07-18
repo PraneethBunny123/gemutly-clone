@@ -1,6 +1,6 @@
 export default function TopSection() {
   return (
-    <section className="relative h-[80vh] flex items-center justify-center bg-cover bg-center text-white" style={{ backgroundImage: "url('/mainbg.jpg')" }}>
+    <section className="relative min-h-screen flex items-center justify-center bg-cover bg-center text-white" style={{ backgroundImage: "url('/mainbg.jpg')" }}>
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-0" />
       <div className="relative z-10 text-center">
         <h1 className="text-5xl font-bold mb-4">Gemutly Clone</h1>

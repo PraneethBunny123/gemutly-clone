@@ -28,7 +28,7 @@ export default function DinerSection() {
   ];
 
   return (
-    <section className="py-12 px-10 max-w-5xl mx-auto my-30">
+    <section className="py-12 px-10 max-w-5xl mx-auto my-30 min-h-screen">
       <h2 className="text-3xl font-semibold text-center mb-8">For Diners</h2>
       <div className="grid gap-6 md:grid-cols-3">
         {cards.map((card) => (
