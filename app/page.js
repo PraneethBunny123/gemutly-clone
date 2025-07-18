@@ -1,10 +1,10 @@
+import TopSection from "@/components/top-section";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
-  return (
-    <div>
-      Hello
-      <Button >Button</Button>
-    </div>
-  );
+    return (
+        <div>
+            <TopSection />
+        </div>
+    );
 }
